@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "age": 25,
+      "name": "Alice",
+      "playlists": [1, 2]
+    },
+    {
+      "id": 2,
+      "age": 30,
+      "name": "Bob",
+      "playlists": [3]
+    },
+    {
+      "id": 3,
+      "age": 22,
+      "name": "Charlie",
+      "playlists": []
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "name": "Rock Classics",
+      "songs": [1, 2, 3]
+    },
+    {
+      "id": 2,
+      "name": "Pop Hits",
+      "songs": [4, 5]
+    },
+    {
+      "id": 3,
+      "name": "Jazz Vibes",
+      "songs": [6, 7, 8]
+    }
+  ],
+  "songs": [
+    {
+      "id": 1,
+      "name": "Bohemian Rhapsody",
+      "artist": "Queen"
+    },
+    {
+      "id": 2,
+      "name": "Stairway to Heaven",
+      "artist": "Led Zeppelin"
+    },
+    {
+      "id": 3,
+      "name": "Hotel California",
+      "artist": "Eagles"
+    },
+    {
+      "id": 4,
+      "name": "Blinding Lights",
+      "artist": "The Weeknd"
+    },
+    {
+      "id": 5,
+      "name": "Shape of You",
+      "artist": "Ed Sheeran"
+    },
+    {
+      "id": 6,
+      "name": "Take Five",
+      "artist": "Dave Brubeck"
+    },
+    {
+      "id": 7,
+      "name": "So What",
+      "artist": "Miles Davis"
+    },
+    {
+      "id": 8,
+      "name": "My Favorite Things",
+      "artist": "John Coltrane"
+    }
+  ]
+}

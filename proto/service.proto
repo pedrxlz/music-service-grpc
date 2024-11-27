@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package service;
+
+import "google/protobuf/empty.proto";
+
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+  repeated int32 playlists = 4;
+}
+
+message Playlist {
+  int32 id = 1;
+  string name = 2;
+  repeated int32 songs = 3;
+}
+
+message Song {
+  int32 id = 1;
+  string name = 2;
+  string artist = 3;
+}
+
+message UserRequest {
+  int32 userId = 1;
+}
+
+message PlaylistRequest {
+  int32 playlistId = 1;
+}
+
+message SongRequest {
+  int32 songId = 1;
+}
+
+message UserList {
+  repeated User users = 1;
+}
+
+message PlaylistList {
+  repeated Playlist playlists = 1;
+}
+
+message SongList {
+  repeated Song songs = 1;
+}
+
+service MusicService {
+  rpc GetUsers (google.protobuf.Empty) returns (UserList);
+  rpc GetPlaylists (google.protobuf.Empty) returns (PlaylistList);
+  rpc GetSongs (google.protobuf.Empty) returns (SongList);
+  rpc GetUserPlaylists (UserRequest) returns (PlaylistList);
+  rpc GetPlaylistSongs (PlaylistRequest) returns (SongList);
+  rpc GetPlaylistsContainingSong (SongRequest) returns (PlaylistList);
+}
